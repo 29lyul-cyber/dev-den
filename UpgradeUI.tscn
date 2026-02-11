@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwjvw7i728u7d"]
+
+[ext_resource type="Script" uid="uid://ddmeyh0g03wbd" path="res://upgrade.gd" id="1_x60vi"]
+
+[sub_resource type="Theme" id="Theme_ayrd0"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_x60vi")
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade_bg" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -31.999998
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(31.294466, 17.665352)
+theme = SubResource("Theme_ayrd0")
+
+[node name="upgrade3" type="Button" parent="Control/upgrade_bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.031000001
+anchor_right = 0.016
+anchor_bottom = 0.031000001
+offset_left = -3.860735
+offset_top = -1.973444
+offset_right = 75.13927
+offset_bottom = 29.026554
+scale = Vector2(0.07970963, 0.12075937)
+text = "pierce +1"
+
+[node name="upgrade2" type="Button" parent="Control/upgrade_bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.031000001
+anchor_right = 0.004
+anchor_bottom = 0.031000001
+offset_left = -2.56291
+offset_top = -1.9734459
+offset_right = 83.43709
+offset_bottom = 29.026554
+scale = Vector2(0.07970963, 0.12075937)
+text = "score x1.5"
+
+[node name="upgrade1" type="Button" parent="Control/upgrade_bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.030000001
+anchor_right = 0.027
+anchor_bottom = 0.030000001
+offset_left = -4.262192
+offset_top = -1.778307
+offset_right = 111.73781
+offset_bottom = 29.221693
+scale = Vector2(0.07970963, 0.12075937)
+text = "Shoot CD 50%"
+
+[connection signal="pressed" from="Control/upgrade_bg/upgrade3" to="Control" method="_on_upgrade_3_pressed"]
+[connection signal="pressed" from="Control/upgrade_bg/upgrade2" to="Control" method="_on_upgrade_2_pressed"]
+[connection signal="pressed" from="Control/upgrade_bg/upgrade1" to="Control" method="_on_upgrade_1_pressed"]

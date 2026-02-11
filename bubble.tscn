@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcdax6mdp4gij"]
+
+[ext_resource type="Script" uid="uid://d4fr872jkumgs" path="res://bubbleshoot.gd" id="1_y2db8"]
+[ext_resource type="Texture2D" uid="uid://c7veu4a5lc6qx" path="res://bubble.png" id="2_4a276"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykrsh"]
+radius = 87.50072
+
+[node name="Area2D" type="Area2D"]
+rotation = -2.725425
+script = ExtResource("1_y2db8")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(2, 5)
+scale = Vector2(0.15999877, 0.15999877)
+texture = ExtResource("2_4a276")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.6293945e-06, 1.5258789e-05)
+scale = Vector2(0.15999877, 0.15999877)
+shape = SubResource("CircleShape2D_ykrsh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

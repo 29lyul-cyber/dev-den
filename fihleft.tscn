@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfk06vpq5tsjy"]
+
+[ext_resource type="PackedScene" uid="uid://dnt4v1i7uoeks" path="res://fih.tscn" id="1_qy47p"]
+
+[node name="Fih" instance=ExtResource("1_qy47p")]
+is_moving_right = false
+
+[node name="Fih" parent="." index="1"]
+scale = Vector2(2.7200024, 2.749287)
+
+[node name="Fly" parent="Fih" index="0"]
+position = Vector2(-0.5699463, 1.6015854)
+scale = Vector2(0.04558234, -0.026311094)
